@@ -33,7 +33,7 @@ fi
 sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-bionic-prod bionic main" > /etc/apt/sources.list.d/dotnetdev.list'
 ExitIfError $?  "Error@$LINENO: Could not add Dotnet repo to sources."
 
-apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893
+apt-key adv --keyserver apt-mo.trafficmanager.net:80 --recv-keys 417A0893
 ExitIfError $?  "Error@$LINENO: Failed to add key for Service Fabric repo"
 curl 'https://packages.microsoft.com/keys/microsoft.asc' | gpg --dearmor | apt-key add -a
 ExitIfError $?  "Error@$LINENO: Failed to add key for dotnet repo"
