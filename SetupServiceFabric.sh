@@ -49,7 +49,7 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0x219BD9C9
 ExitIfError $?  "Error@$LINENO: Failed to add key for zulu repo"
 
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B02C46DF417A0883
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B02C46DF417A0893
 ExitIfError $? "Error@$LINENO: Failed to add key for MS Open Tech"
 
 apt-add-repository "deb http://repos.azul.com/azure-only/zulu/apt stable main"
