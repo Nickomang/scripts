@@ -245,7 +245,7 @@ function GetIssue {
     )
     $hdr = @{
       Accept = 'application/vnd.github.v3+json'
-      Authorization = "token fed4494c2b785e89f74ccedac2b5813d57e560d7"
+      Authorization = "token a9d4c3950c7b478cf35aacf7404f018fa2b85520"
     }
     if ($issueurl -ne '') {
       $repo = ($issueurl.Segments[1..2] -join '').trim('/')
