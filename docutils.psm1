@@ -243,10 +243,13 @@ function GetIssue {
       [Parameter(ParameterSetName='byurl',Mandatory=$true)]
       [uri]$issueurl
     )
+    $token = Get-Content -Path .\ghtoken.txt
+    Write-Output $token
     $hdr = @{
       Accept = 'application/vnd.github.v3+json'
-      Authorization = "token a9d4c3950c7b478cf35aacf7404f018fa2b85520"
+      Authorization = "token $($token)" 
     }
+    
     if ($issueurl -ne '') {
       $repo = ($issueurl.Segments[1..2] -join '').trim('/')
       $issuename = $issueurl.Segments[1..4] -join ''
@@ -273,6 +276,6 @@ function GetIssue {
   
   
 
-Export-ModuleMember -Function "Get-FileInfoOnContent","Add-BordertoImage","New-VSTSWorkItem", "Copy-VSTSWorkItem"
+Export-ModuleMember -Function "Get-FileInfoOnContent","Add-BordertoImage","New-VSTSWorkItem", "Copy-VSTSWorkItem, GetIssue"
 
 
