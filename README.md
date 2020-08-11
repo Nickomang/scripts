@@ -1,13 +1,11 @@
 # Scripts
-## A collection of my most useful shell scripts
+## A collection of my most useful scripts
 
 ### Hideicons/Showicons
 
-Hides/shows all icons on the desktop, useful for displaying a clean environment (#ricing) while being
+Hides/shows all icons on the macOS desktop, useful for displaying a clean environment when I want while being
 able to access things when I need to.
 
-### Kwm/Unkwm
+### Docutils.psm1
 
-Uses launchctl to load and unload the [kwm](http://github.com/koekeishiya/kwm) window manager. More of a workaround for it not functioning
-correctly on my machine, but honestly pretty useful even if it does.
-
+A powershell module with a few utilities for writing Microsoft docs and managing Azure Boards + GitHub integration.
